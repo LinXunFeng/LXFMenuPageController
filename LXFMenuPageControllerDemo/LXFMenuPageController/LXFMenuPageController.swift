@@ -8,8 +8,8 @@
 
 import UIKit
 
-let kSystemOriginColor = UIColor(red: 0.96, green: 0.39, blue: 0.26, alpha: 1.0)
-let kSystemBlackColor = UIColor(red: 0.38, green: 0.39, blue: 0.40, alpha: 1.0)
+let kOriginColor = UIColor(red: 0.96, green: 0.39, blue: 0.26, alpha: 1.0)
+let kBlackColor = UIColor(red: 0.38, green: 0.39, blue: 0.40, alpha: 1.0)
 let kScreenW = UIScreen.main.bounds.width
 let kScreenH = UIScreen.main.bounds.height
 
@@ -24,11 +24,11 @@ class LXFMenuPageController: UIViewController {
     /// 代理
     weak var delegate: LXFMenuPageControllerDelegate?
     /// 滑块颜色
-    var sliderColor: UIColor = kSystemOriginColor { didSet { updateView() } }
+    var sliderColor: UIColor = kOriginColor { didSet { updateView() } }
     /// 子标题按钮未选中颜色
-    var tipBtnNormalColor : UIColor = kSystemBlackColor { didSet { updateView() } }
+    var tipBtnNormalColor : UIColor = kBlackColor { didSet { updateView() } }
     /// 子标题按钮选中颜色
-    var tipBtnHighlightedColor : UIColor = kSystemOriginColor { didSet { updateView() } }
+    var tipBtnHighlightedColor : UIColor = kOriginColor { didSet { updateView() } }
     /// 子标题按钮UIFont
     var tipBtnFontSize : CGFloat = 15 { didSet { updateView() } }
     /// 头部视图颜色
