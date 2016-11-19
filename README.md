@@ -1,6 +1,7 @@
 # LXFMenuPageController
 快速创建菜单分类控制器
 
+基于Swfit 3.0
 
 ## 使用
 
