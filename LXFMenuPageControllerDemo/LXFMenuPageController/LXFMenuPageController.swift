@@ -67,11 +67,13 @@ class LXFMenuPageController: UIViewController {
    }()
     
     // MARK:- init
-    init(controllers: [UIViewController], titles: [String]) {
+    init(controllers: [UIViewController], titles: [String], inParentController: UIViewController) {
         super.init(nibName: nil, bundle: nil)
         // 存储数据
         self.controllers = controllers
         self.titleArray = titles
+        // 添加子控制器
+        inParentController.addChildViewController(self)
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -129,6 +131,7 @@ extension LXFMenuPageController {
         let pageW: CGFloat = self.view.frame.width
         let pageH: CGFloat = self.view.frame.height - pageY
         page.view.frame = CGRect(x: pageX, y: pageY, width: pageW, height: pageH)
+        self.addChildViewController(page)
         pageVc = page
         self.view.addSubview(page.view)
     }

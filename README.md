@@ -13,7 +13,7 @@
 3.将创建的LXFPageViewController视图添加到当前控制器视图中
 
 ```
-let menuVc = LXFMenuPageController(controllers: self.controllers, titles: self.subTitleArr)
+let menuVc = LXFMenuPageController(controllers: self.controllers, titles: self.subTitleArr, inParentController: self)
 menuVc.delegate = self
 menuVc.view.frame = self.view.frame
 self.view.addSubview(menuVc.view)

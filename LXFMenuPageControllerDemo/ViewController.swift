@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     
     /// 菜单分类控制器
     lazy var lxfMenuVc: LXFMenuPageController = {
-        let pageVc = LXFMenuPageController(controllers: self.controllers, titles: self.subTitleArr)
+        let pageVc = LXFMenuPageController(controllers: self.controllers, titles: self.subTitleArr, inParentController: self)
         pageVc.delegate = self
         self.view.addSubview(pageVc.view)
         return pageVc
